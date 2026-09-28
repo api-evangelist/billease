@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/billease/main/json-schema/billease-post-trx-transaction-request-schema.json",
+  "title": "PostTrxTransactionRequest",
+  "x-generated": "2026-09-28",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/billease-openapi-generated.yml#/components/schemas/PostTrxTransactionRequest",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "description": "Order ID. Echo it back on every POST /trx/{id}/update call."
+    },
+    "trx_id": {
+      "type": "string",
+      "description": "Transaction ID (UUID). It also goes in the path of the delivery-status update calls."
+    },
+    "product_id": {
+      "type": "string",
+      "description": "Your product id, the same id you send us on POST /products/sync."
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount paid by the customer, in major currency units."
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency."
+    },
+    "created": {
+      "type": "string",
+      "description": "Timestamp when the transaction order creation was initiated on partner side."
+    },
+    "customer": {
+      "type": "object",
+      "description": "Recipient of the goods, and where they ship."
+    },
+    "sender": {
+      "type": "object",
+      "description": "The buyer, when the goods were purchased for someone else."
+    }
+  },
+  "required": [
+    "order_id",
+    "trx_id",
+    "product_id",
+    "amount",
+    "currency",
+    "created",
+    "customer"
+  ]
+}

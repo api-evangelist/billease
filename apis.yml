@@ -1,23 +1,117 @@
 aid: billease
+
 name: Billease
-description: 'Billease is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://billease.ph/billease_banner.png
+
+description: Billease is a Philippine fintech company offering buy‑now‑pay‑later (BNPL) services and personal loans through its mobile app. Founded
+  in 1969 as a rural bank, it now provides installment financing for online shopping, bill payments, and cash loans, targeting over 10 million
+  users. The platform features zero‑interest credit lines, QR‑code payments, and integrates with thousands of merchants across the Philippines,
+  regulated by the Bangko Sentral ng Pilipinas.
+
 url: https://raw.githubusercontent.com/api-evangelist/billease/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Fintech
+- BNPL
+- Philippines
+- Loans
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/billease-rules.yml
+- type: JSONLD
+  url: json-ld/billease-context.jsonld
+- type: Vocabulary
+  url: vocabulary/billease-vocabulary.yml
+- type: DataModel
+  url: data-model/billease-data-model.yml
+- type: Conformance
+  url: conformance/billease-conformance.yml
+- type: Hosts
+  url: hosts/billease-hosts.yml
+- type: Vendors
+  url: vendors/billease-vendors.yml
+- type: Login
+  url: https://billease.ph/account/login
+- type: Documentation
+  url: https://dev.billease.ph/
+- type: DomainSecurity
+  url: security/billease-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/billease
+  url: https://billease.ph
+- type: Blog
+  url: https://billease.ph/blog/
+- type: APIReference
+  url: https://billease.ph/api/
+- type: Support
+  url: https://billease.ph/contact-us
+- type: TermsOfService
+  url: https://billease.ph/terms
+- type: PrivacyPolicy
+  url: https://billease.ph/privacy
+
+apis:
+- name: Billease API
+  description: API for Billease fintech services, offering BNPL and personal loans.
+  humanURL: https://dev.billease.ph/
+  baseURL: null
+  aid: billease:billease-api-2
+- aid: billease:billease-api
+  name: Billease API
+  description: 'Billease API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-09-28);
+
+    not the provider''s own document.'
+  humanURL: https://docs.billease.ph/api-trx
+  baseURL: https://trx-test.billease.ph
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/billease-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-transaction-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found on any discovered host.
+  evidence:
+  - url: https://billease.ph/api/
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
