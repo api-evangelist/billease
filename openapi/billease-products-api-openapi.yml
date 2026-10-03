@@ -1,0 +1,134 @@
+openapi: 3.2.0
+info:
+  title: Billease Products API
+  version: '2026-09-28'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-28: 10 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Billease has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 9
+    pages-with-code: 1
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-28'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.billease.ph/api-trx
+  - https://docs.billease.ph/api-callback
+  - https://docs.billease.ph/api-products
+  - https://docs.billease.ph/integration/api-specification
+  - https://docs.billease.ph/redocusaurus/plugin-redoc-0.yaml
+  - https://docs.billease.ph/redocusaurus/plugin-redoc-1.yaml
+  - https://docs.billease.ph/redocusaurus/plugin-redoc-2.yaml
+  - https://docs.billease.ph/integration/deals/intro
+  - https://docs.billease.ph/integration/deals/product-sync
+  - https://docs.billease.ph/integration/deals/transaction-orders
+servers:
+- url: https://trx-test.billease.ph
+security:
+- bearer: []
+tags:
+- name: Products
+paths:
+  /products:
+    get:
+      operationId: get_products
+      tags:
+      - Products
+      summary: Get products
+      x-source: https://docs.billease.ph/api-products
+      parameters:
+      - name: shop_code
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your shop UUID
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: 'Filter by status. Enum: 1, 2, 3, 4. Omit for all.'
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: 'Page number, 1-based. Default: 1'
+      - name: per_page
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: 'Items per page, max 200. Default: 50'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetProductsResponse'
+      x-evidence:
+        kind: documentation
+  /products/sync:
+    post:
+      operationId: post_products_sync
+      tags:
+      - Products
+      summary: Products Catalog synchronisation
+      x-source: https://docs.billease.ph/api-products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostProductsSyncRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostProductsSyncResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostProductsSyncResponse:
+      type: object
+      properties:
+        results:
+          type: array
+          description: Array of result objects for each product entry.
+    PostProductsSyncRequest:
+      type: object
+      properties:
+        shop_code:
+          type: string
+          description: Shop UUID code. Issued by Billease at onboarding; different per environment.
+        mer_code:
+          type: string
+          description: Merchant UUID code. Issued by Billease at onboarding; different per environment.
+        products:
+          type: array
+          description: One or more product operations, max 1000. Each entry is resolved independently; the fields present determine the operation.
+      required:
+      - shop_code
+      - mer_code
+      - products
+    GetProductsResponse:
+      type: object
+      properties:
+        pages:
+          type: object
+          description: Pagination info.
+        products:
+          type: array
+          description: List of product objects.
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

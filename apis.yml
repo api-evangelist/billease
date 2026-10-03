@@ -77,17 +77,16 @@ apis:
   humanURL: https://dev.billease.ph/
   baseURL: null
   aid: billease:billease-api-2
-- aid: billease:billease-api
-  name: Billease API
-  description: 'Billease API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-09-28);
-
-    not the provider''s own document.'
-  humanURL: https://docs.billease.ph/api-trx
+- aid: billease:billease-be-store-admin-api-api
+  name: Billease Be Store Admin API
+  description: The Be Store Admin Api API from Billease — 1 operation(s) for be store admin api.
+  humanURL: https://dev.billease.ph/
   baseURL: https://trx-test.billease.ph
+  tags:
+  - Be Store Admin Api
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/billease-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/billease-be-store-admin-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/billease-post-trx-transaction-request-schema.json
   - type: JSONSchema
@@ -100,7 +99,94 @@ apis:
     url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
   - type: JSONSchema
     url: json-schema/billease-post-trx-id-id-response-schema.json
-
+- aid: billease:billease-be-transactions-api-api
+  name: Billease Be Transactions API
+  description: The Be Transactions Api API from Billease — 1 operation(s) for be transactions api.
+  humanURL: https://dev.billease.ph/
+  baseURL: https://trx-test.billease.ph
+  tags:
+  - Be Transactions Api
+  properties:
+  - type: OpenAPI
+    url: openapi/billease-be-transactions-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-transaction-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-response-schema.json
+- aid: billease:billease-categories-api
+  name: Billease Categories API
+  description: The Categories API from Billease — 1 operation(s) for categories.
+  humanURL: https://dev.billease.ph/
+  baseURL: https://trx-test.billease.ph
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/billease-categories-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-transaction-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-response-schema.json
+- aid: billease:billease-products-api
+  name: Billease Products API
+  description: The Products API from Billease — 2 operation(s) for products.
+  humanURL: https://dev.billease.ph/
+  baseURL: https://trx-test.billease.ph
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/billease-products-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-transaction-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-response-schema.json
+- aid: billease:billease-trx-api
+  name: Billease Trx API
+  description: The Trx API from Billease — 4 operation(s) for trx.
+  humanURL: https://dev.billease.ph/
+  baseURL: https://trx-test.billease.ph
+  tags:
+  - Trx
+  properties:
+  - type: OpenAPI
+    url: openapi/billease-trx-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-transaction-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-request-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-be-store-admin-api-products-sync-response-schema.json
+  - type: JSONSchema
+    url: json-schema/billease-post-trx-id-id-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

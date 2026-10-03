@@ -1,0 +1,22 @@
+{
+  "provider": "billease",
+  "sources": [
+    "_ae-authored/billease-openapi-generated.yml"
+  ],
+  "outputs": [
+    "billease-be-store-admin-api-api-openapi.yml",
+    "billease-be-transactions-api-api-openapi.yml",
+    "billease-categories-api-openapi.yml",
+    "billease-products-api-openapi.yml",
+    "billease-trx-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "billease-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+5 apis, 6 total)"
+  ],
+  "skipped": []
+}
