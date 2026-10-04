@@ -97,12 +97,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostProductsSyncResponse:
-      type: object
-      properties:
-        results:
-          type: array
-          description: Array of result objects for each product entry.
     PostProductsSyncRequest:
       type: object
       properties:
@@ -128,6 +122,12 @@ components:
         products:
           type: array
           description: List of product objects.
+    PostProductsSyncResponse:
+      type: object
+      properties:
+        results:
+          type: array
+          description: Array of result objects for each product entry.
   securitySchemes:
     bearer:
       type: http

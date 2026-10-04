@@ -16,7 +16,13 @@
   "notes": [
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "billease-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+5 apis, 6 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "billease-be-store-admin-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "billease-be-transactions-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "billease-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "billease-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "billease-trx-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

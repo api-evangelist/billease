@@ -200,6 +200,15 @@ components:
       - currency
       - created
       - customer
+    PostTrxTransactionResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: OK
+        in_stock:
+          type: integer
+          description: Remaining stock count.
     PostTrxIdIdRequest:
       type: object
       properties:
@@ -212,15 +221,6 @@ components:
         amount:
           type: number
           description: Amount to be refunded
-    PostTrxTransactionResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          description: OK
-        in_stock:
-          type: integer
-          description: Remaining stock count.
   securitySchemes:
     bearer:
       type: http
