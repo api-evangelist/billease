@@ -27,6 +27,12 @@ modified: '2026-09-28'
 tags:
 - Company
 - Fintech
+- Buy Now Pay Later
+- Philippines
+- Loans
+tags_raw:
+- Company
+- Fintech
 - BNPL
 - Philippines
 - Loans
@@ -149,6 +155,8 @@ apis:
   humanURL: https://dev.billease.ph/
   baseURL: https://trx-test.billease.ph
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
