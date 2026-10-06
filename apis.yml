@@ -22,7 +22,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-28'
 
-modified: '2026-09-28'
+modified: '2026-10-06'
 
 tags:
 - Company
@@ -44,6 +44,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://billease.ph/blog/feed.xml
+  type: BlogRSS
 - type: Spectral
   url: rules/billease-rules.yml
 - type: JSONLD
