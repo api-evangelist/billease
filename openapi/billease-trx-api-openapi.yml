@@ -153,18 +153,6 @@ paths:
         collapsed_from: 2 example path(s) differing only at id
 components:
   schemas:
-    PostTrxIdIdResponse:
-      type: object
-      properties:
-        refund_id:
-          type: string
-          description: Refund identifier
-        refund_time:
-          type: string
-          description: Time of refund
-        status:
-          type: string
-          description: Refund status
     PostTrxTransactionRequest:
       type: object
       properties:
@@ -200,15 +188,18 @@ components:
       - currency
       - created
       - customer
-    PostTrxTransactionResponse:
+    PostTrxIdIdResponse:
       type: object
       properties:
+        refund_id:
+          type: string
+          description: Refund identifier
+        refund_time:
+          type: string
+          description: Time of refund
         status:
           type: string
-          description: OK
-        in_stock:
-          type: integer
-          description: Remaining stock count.
+          description: Refund status
     PostTrxIdIdRequest:
       type: object
       properties:
@@ -221,6 +212,15 @@ components:
         amount:
           type: number
           description: Amount to be refunded
+    PostTrxTransactionResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: OK
+        in_stock:
+          type: integer
+          description: Remaining stock count.
   securitySchemes:
     bearer:
       type: http

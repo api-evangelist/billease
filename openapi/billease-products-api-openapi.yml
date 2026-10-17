@@ -97,6 +97,15 @@ paths:
         kind: documentation
 components:
   schemas:
+    GetProductsResponse:
+      type: object
+      properties:
+        pages:
+          type: object
+          description: Pagination info.
+        products:
+          type: array
+          description: List of product objects.
     PostProductsSyncRequest:
       type: object
       properties:
@@ -113,15 +122,6 @@ components:
       - shop_code
       - mer_code
       - products
-    GetProductsResponse:
-      type: object
-      properties:
-        pages:
-          type: object
-          description: Pagination info.
-        products:
-          type: array
-          description: List of product objects.
     PostProductsSyncResponse:
       type: object
       properties:
