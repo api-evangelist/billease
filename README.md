@@ -64,5 +64,117 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Billease is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/billease
+Billease is a Philippine fintech company offering buy‑now‑pay‑later (BNPL) services and personal loans through its mobile app. Founded in 1969 as a rural bank, it now provides installment financing for online shopping, bill payments, and cash loans, targeting over 10 million users. The platform features zero‑interest credit lines, QR‑code payments, and integrates with thousands of merchants across the Philippines, regulated by the Bangko Sentral ng Pilipinas.
+
+**Areas:** Company · Fintech · Buy Now Pay Later · Philippines · Loans
+
+## Billease on APIs.io
+
+Everything profiled for Billease is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/billease/](https://apis.io/providers/billease/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Billease API](https://apis.io/apis/billease/billease-api-2/) — API for Billease fintech services, offering BNPL and personal loans.
+- [Billease Be Store Admin API](https://apis.io/apis/billease/billease-be-store-admin-api-api/) — The Be Store Admin Api API from Billease — 1 operation(s) for be store admin api.
+- [Billease Be Transactions API](https://apis.io/apis/billease/billease-be-transactions-api-api/) — The Be Transactions Api API from Billease — 1 operation(s) for be transactions api.
+- [Billease Categories API](https://apis.io/apis/billease/billease-categories-api/) — The Categories API from Billease — 1 operation(s) for categories.
+- [Billease Products API](https://apis.io/apis/billease/billease-products-api/) — The Products API from Billease — 2 operation(s) for products.
+- [Billease Trx API](https://apis.io/apis/billease/billease-trx-api/) — The Trx API from Billease — 4 operation(s) for trx.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PostBeStoreAdminApiProductsSyncRequest](https://apis.io/schemas/billease/billease-post-be-store-admin-api-products-sync-request/)
+- [PostBeStoreAdminApiProductsSyncResponse](https://apis.io/schemas/billease/billease-post-be-store-admin-api-products-sync-response/)
+- [PostProductsSyncRequest](https://apis.io/schemas/billease/billease-post-products-sync-request/)
+- [PostTrxIdIdRequest](https://apis.io/schemas/billease/billease-post-trx-id-id-request/)
+- [PostTrxIdIdResponse](https://apis.io/schemas/billease/billease-post-trx-id-id-response/)
+- [PostTrxTransactionRequest](https://apis.io/schemas/billease/billease-post-trx-transaction-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Billease Context](https://apis.io/jsonld/billease/billease-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Billease API Rules](https://apis.io/rules/billease/billease-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Billease Domain Security](https://apis.io/security/billease/billease-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://billease.ph)
+- [Documentation](https://dev.billease.ph/)
+- [API reference](https://billease.ph/api/)
+- [Support](https://billease.ph/contact-us)
+- [Blog](https://billease.ph/blog/)
+- [Terms of service](https://billease.ph/terms)
+- [Privacy policy](https://billease.ph/privacy)
+
+## API Evangelist rating
+
+**Kin Score 26.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 26.1 |
+| Contract governance | 22.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 34.2 |
+
+**Agent readiness 19.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/billease/](https://apis.io/providers/billease/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Billease: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/billease/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
